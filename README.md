@@ -1,4 +1,4 @@
-# <img src='Workflow/icon.png' width='45' align='center' alt='icon'> Alias Homebrew Apps
+# <img src='Workflow/icon.png' width='45' align='center' alt='icon'> Alias Homebrew Apps Alfred Workflow
 
 Create shortcuts to Homebrew formula app bundles
 
