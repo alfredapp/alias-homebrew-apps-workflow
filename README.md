@@ -2,7 +2,11 @@
 
 Create shortcuts to Homebrew formula app bundles
 
-## Instructions
+<a href='https://github.com/alfredapp/alias-homebrew-apps-workflow/releases/latest/download/Alias.Homebrew.Apps.alfredworkflow'>⤓ Download Workflow</a>
+
+## About
+
+<!-- BEGIN ABOUT -->
 
 Apps built via Homebrew formulae are nested deep in the `Cellar` and not indexed by Spotlight (and thus Alfred). This Workflow takes care of that.
 
@@ -22,10 +26,6 @@ alias brewalias='/usr/bin/osascript -e "tell application id \"com.runningwithcra
 
 Then executing `brewalias` in a Terminal will run the Workflow.
 
-## Download
+<!-- END ABOUT -->
 
-[Get the latest release.](https://github.com/alfredapp/alias-homebrew-apps-workflow/releases/latest/download/Alias.Homebrew.Apps.alfredworkflow)
-
-## License
-
-3-Clause BSD
+<a href='https://github.com/alfredapp/alias-homebrew-apps-workflow/releases/latest/download/Alias.Homebrew.Apps.alfredworkflow'>⤓ Download Workflow</a>
