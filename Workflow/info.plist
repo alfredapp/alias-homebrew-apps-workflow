@@ -59,6 +59,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>brewalias</string>
+				<key>subtext</key>
+				<string>Create shortcuts to Homebrew formula app bundles</string>
+				<key>text</key>
+				<string>Alias Homebrew Apps</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>26E2AE7C-9A24-4AD8-B0AB-152FFB18DFD3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -154,27 +175,6 @@ fi</string>
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>brewalias</string>
-				<key>subtext</key>
-				<string>Create shortcuts to Homebrew formula app bundles</string>
-				<key>text</key>
-				<string>Alias Homebrew Apps</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>26E2AE7C-9A24-4AD8-B0AB-152FFB18DFD3</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -204,11 +204,7 @@ function update_alias {
 }
 
 # Main
-export PATH="/opt/homebrew/bin:/usr/local/bin:${PATH}"
-
-readonly apps_dir="${applications_dir/#\~/${HOME}}"
-
-IFS=',' read -rA formulae_arr &lt; &lt;(tr -d ' ' &lt;&lt;&lt; "${formulae}")
+readonly formulae_arr=("${(f)${formulae}}")
 
 for formula in "${formulae_arr[@]}"; do
   while IFS= read -r app; do
@@ -276,13 +272,9 @@ fi
 	<key>readme</key>
 	<string>Apps built via Homebrew formulae are nested deep in the `Cellar` and not indexed by Spotlight (and thus Alfred). This Workflow takes care of that.
 
-Set up the `formulae` Workflow Environment Variable as a comma-separated list of formula names. Run `brewalias` and app bundles found under those will be aliased into your Applications directory, allowing them to be indexed and invoked like other apps.
+Configure the formulae you want linked and run `brewalias`. App bundles will be aliased into your Applications directory, allowing them to be indexed and invoked like other apps.
 
 ![Alfred search for brewalias](images/about/brewalias.png)
-
-Make `formulae` empty to create aliases for all app bundles under your Homebrew Cellar. This may add more than you want.
-
-The `applications_dir` Workflow Environment Variable sets the directory to save the aliases to, like `/Applications` or `~/Applications`.
 
 You can run the Workflow from a Terminal via the External Trigger. The simplest way is to define an alias in your shell’s startup files:
 
@@ -327,18 +319,50 @@ Then executing `brewalias` in a Terminal will run the Workflow.</string>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>
-	<array/>
-	<key>variables</key>
-	<dict>
-		<key>applications_dir</key>
-		<string>/Applications</string>
-		<key>formulae</key>
-		<string>macvim, neovim-qt</string>
-	</dict>
-	<key>variablesdontexport</key>
-	<array/>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>/Applications</string>
+				<key>filtermode</key>
+				<integer>0</integer>
+				<key>required</key>
+				<false/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Applications Folder</string>
+			<key>type</key>
+			<string>filepicker</string>
+			<key>variable</key>
+			<string>apps_dir</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+				<key>verticalsize</key>
+				<integer>3</integer>
+			</dict>
+			<key>description</key>
+			<string>Newline-separated list of formulae. Leave empty to alias every app bundle in Homebrew’s Cellar.</string>
+			<key>label</key>
+			<string>Formulae</string>
+			<key>type</key>
+			<string>textarea</string>
+			<key>variable</key>
+			<string>formulae</string>
+		</dict>
+	</array>
 	<key>version</key>
-	<string>2022.3</string>
+	<string>2022.4</string>
 	<key>webaddress</key>
 	<string>https://github.com/alfredapp/alias-homebrew-apps-workflow/</string>
 </dict>
