@@ -62,7 +62,7 @@
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>keyword</key>
-				<string>brewalias</string>
+				<string>{var:alias_keyword}</string>
 				<key>subtext</key>
 				<string>Create shortcuts to Homebrew formula app bundles</string>
 				<key>text</key>
@@ -204,7 +204,7 @@ function update_alias {
 }
 
 # Main
-readonly formulae_arr=("${(f)${formulae}}")
+readonly formulae_arr=("${(f)formulae}")
 
 for formula in "${formulae_arr[@]}"; do
   while IFS= read -r app; do
@@ -270,9 +270,9 @@ fi
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Apps built via Homebrew formulae are nested deep in the `Cellar` and not indexed by Spotlight (and thus Alfred). This Workflow takes care of that.
+	<string>## Usage
 
-Configure the formulae you want linked and run `brewalias`. App bundles will be aliased into your Applications directory, allowing them to be indexed and invoked like other apps.
+Configure the formulae you want linked and run the Alias Keyword (default: `brewalias`). App bundles will be aliased into your Applications directory, allowing them to be indexed and invoked like other apps.
 
 ![Alfred search for brewalias](images/about/brewalias.png)
 
@@ -324,9 +324,32 @@ Then executing `brewalias` in a Terminal will run the Workflow.</string>
 			<key>config</key>
 			<dict>
 				<key>default</key>
+				<string>brewalias</string>
+				<key>placeholder</key>
+				<string></string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Alias Keyword</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>alias_keyword</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
 				<string>/Applications</string>
 				<key>filtermode</key>
 				<integer>0</integer>
+				<key>placeholder</key>
+				<string></string>
 				<key>required</key>
 				<false/>
 			</dict>
@@ -362,7 +385,7 @@ Then executing `brewalias` in a Terminal will run the Workflow.</string>
 		</dict>
 	</array>
 	<key>version</key>
-	<string>2022.4</string>
+	<string>2022.5</string>
 	<key>webaddress</key>
 	<string>https://github.com/alfredapp/alias-homebrew-apps-workflow/</string>
 </dict>
