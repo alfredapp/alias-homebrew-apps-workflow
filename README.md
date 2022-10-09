@@ -4,7 +4,7 @@ Create shortcuts to Homebrew formula app bundles
 
 <a href='https://github.com/alfredapp/alias-homebrew-apps-workflow/releases/latest/download/Alias.Homebrew.Apps.alfredworkflow'>⤓ Download Workflow</a>
 
-## About
+> On Alfred 4 use <a href='https://github.com/alfredapp/alias-homebrew-apps-workflow/releases/download/2022.2/Alias.Homebrew.Apps.alfredworkflow'>alternative link</a>
 
 ## Usage
 
@@ -19,5 +19,3 @@ alias brewalias='/usr/bin/osascript -e "tell application id \"com.runningwithcra
 ```
 
 Then executing `brewalias` in a Terminal will run the Workflow.
-
-<a href='https://github.com/alfredapp/alias-homebrew-apps-workflow/releases/latest/download/Alias.Homebrew.Apps.alfredworkflow'>⤓ Download Workflow</a>
