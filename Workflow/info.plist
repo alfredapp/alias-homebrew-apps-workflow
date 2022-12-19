@@ -48,6 +48,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>{var:alias_keyword}</string>
+				<key>subtext</key>
+				<string>Create shortcuts to Homebrew formula app bundles</string>
+				<key>text</key>
+				<string>Alias Homebrew Apps</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>26E2AE7C-9A24-4AD8-B0AB-152FFB18DFD3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -129,27 +150,6 @@ fi
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>{var:alias_keyword}</string>
-				<key>subtext</key>
-				<string>Create shortcuts to Homebrew formula app bundles</string>
-				<key>text</key>
-				<string>Alias Homebrew Apps</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>26E2AE7C-9A24-4AD8-B0AB-152FFB18DFD3</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>availableviaurlhandler</key>
 				<false/>
 				<key>triggerid</key>
@@ -173,7 +173,7 @@ Set the formulae you want linked in the workflow’s configuration and run the A
 You can run the workflow from a Terminal via the External Trigger. The simplest way is to define an alias in your shell’s startup files:
 
 ```
-alias brewalias='/usr/bin/osascript -e "tell application id \"com.runningwithcrayons.Alfred\" to run trigger \"build\" in workflow \"com.alfredapp.aliashomebrewapps\""'
+alias brewalias='/usr/bin/osascript -e "tell application id \"com.runningwithcrayons.Alfred\" to run trigger \"build\" in workflow \"com.alfredapp.vitor.aliashomebrewapps\""'
 ```
 
 Then executing `brewalias` in a Terminal will run the Workflow.</string>
@@ -268,7 +268,7 @@ Then executing `brewalias` in a Terminal will run the Workflow.</string>
 		</dict>
 	</array>
 	<key>version</key>
-	<string>2022.6</string>
+	<string>2022.7</string>
 	<key>webaddress</key>
 	<string>https://github.com/alfredapp/alias-homebrew-apps-workflow/</string>
 </dict>

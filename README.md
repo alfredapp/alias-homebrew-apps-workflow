@@ -13,7 +13,7 @@ Set the formulae you want linked in the workflow’s configuration and run the A
 You can run the workflow from a Terminal via the External Trigger. The simplest way is to define an alias in your shell’s startup files:
 
 ```
-alias brewalias='/usr/bin/osascript -e "tell application id \"com.runningwithcrayons.Alfred\" to run trigger \"build\" in workflow \"com.alfredapp.aliashomebrewapps\""'
+alias brewalias='/usr/bin/osascript -e "tell application id \"com.runningwithcrayons.Alfred\" to run trigger \"build\" in workflow \"com.alfredapp.vitor.aliashomebrewapps\""'
 ```
 
 Then executing `brewalias` in a Terminal will run the Workflow.
