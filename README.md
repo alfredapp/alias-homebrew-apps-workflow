@@ -4,6 +4,8 @@ Create shortcuts to Homebrew formula app bundles
 
 <a href='https://alfred.app/workflows/alfredapp/alias-homebrew-apps'>⤓ Install on the Alfred Gallery</a>
 
+> On Alfred 4 use <a href='https://github.com/alfredapp/alias-homebrew-apps-workflow/releases/download/2022.2/Alias.Homebrew.Apps.alfredworkflow'>alternative link</a>
+
 ## Usage
 
 Set the formulae you want linked in the workflow’s configuration and run the Alias Keyword (default: `brewalias`). App bundles will be aliased into your Applications directory, allowing them to be indexed and invoked like other apps.
