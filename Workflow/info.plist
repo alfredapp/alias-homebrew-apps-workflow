@@ -48,6 +48,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>keyword</key>
+				<string>{var:alias_keyword}</string>
+				<key>subtext</key>
+				<string>Create shortcuts to Homebrew formula app bundles</string>
+				<key>text</key>
+				<string>Alias Homebrew Apps</string>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>26E2AE7C-9A24-4AD8-B0AB-152FFB18DFD3</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -129,27 +150,6 @@ fi
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argumenttype</key>
-				<integer>2</integer>
-				<key>keyword</key>
-				<string>{var:alias_keyword}</string>
-				<key>subtext</key>
-				<string>Create shortcuts to Homebrew formula app bundles</string>
-				<key>text</key>
-				<string>Alias Homebrew Apps</string>
-				<key>withspace</key>
-				<false/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.keyword</string>
-			<key>uid</key>
-			<string>26E2AE7C-9A24-4AD8-B0AB-152FFB18DFD3</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>availableviaurlhandler</key>
 				<false/>
 				<key>triggerid</key>
@@ -170,7 +170,7 @@ Set the formulae you want linked in the [Workflow’s Configuration](https://www
 
 ## Usage
 
-Run the Alias Keyword (default: `brewalias`). Homebrew Cellar apps will be aliased into your Applications Folder, allowing them to be indexed and found.
+Alias your Homebrew Cellar apps to the Applications Folder via the `brewalias` keyword. This will allow them to be indexed by macOS and found.
 
 ![Alfred search for brewalias](images/about/brewalias.png)
 
