@@ -2,7 +2,7 @@
 
 Create shortcuts to Homebrew formula app bundles
 
-<a href='https://alfred.app/workflows/alfredapp/alias-homebrew-apps'>⤓ Install on the Alfred Gallery</a>
+[⤓ Install on the Alfred Gallery](https://alfred.app/workflows/alfredapp/alias-homebrew-apps)
 
 ## Setup
 
@@ -10,7 +10,7 @@ Set the formulae you want linked in the [Workflow’s Configuration](https://www
 
 ## Usage
 
-Run the Alias Keyword (default: `brewalias`). Homebrew Cellar apps will be aliased into your Applications Folder, allowing them to be indexed and found.
+Alias your Homebrew Cellar apps to the Applications Folder via the `brewalias` keyword. This will allow them to be indexed by macOS and found.
 
 ![Alfred search for brewalias](Workflow/images/about/brewalias.png)
 
