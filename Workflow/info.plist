@@ -272,7 +272,7 @@ alias brewalias='/usr/bin/osascript -e "tell application id \"com.runningwithcra
 		</dict>
 	</array>
 	<key>version</key>
-	<string>2023.2</string>
+	<string>2023.3</string>
 	<key>webaddress</key>
 	<string>https://github.com/alfredapp/alias-homebrew-apps-workflow/</string>
 </dict>

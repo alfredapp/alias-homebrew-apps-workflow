@@ -4,8 +4,6 @@ Create shortcuts to Homebrew formula app bundles
 
 [⤓ Install on the Alfred Gallery](https://alfred.app/workflows/alfredapp/alias-homebrew-apps)
 
-> On Alfred 4 use <a href='https://github.com/alfredapp/alias-homebrew-apps-workflow/releases/download/2022.2/Alias.Homebrew.Apps.alfredworkflow'>alternative link</a>
-
 ## Setup
 
 Set the formulae you want linked in the [Workflow’s Configuration](https://www.alfredapp.com/help/workflows/user-configuration/).
